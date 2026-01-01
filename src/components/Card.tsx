@@ -8,7 +8,10 @@ function Card({ users }: CardProps) {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
       {users.map((user) => (
-        <div className="bg-white p-4 rounded-lg text-black" key={user.id}>
+        <div
+          className="bg-white dark:bg-gray-800 p-4 rounded-lg text-black dark:text-white shadow-md dark:shadow-blue-900 border border-gray-200 dark:border-gray-700 transition-colors duration-300"
+          key={user.id}
+        >
           <h4 className="font-bold">Nombre: {user.name}</h4>
           <p>
             <span className="font-bold">Email: </span>

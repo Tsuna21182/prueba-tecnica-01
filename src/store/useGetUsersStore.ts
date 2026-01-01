@@ -36,3 +36,11 @@ export const useGetUsersStore = create<getAllUsersProps>((set) => ({
     }
   },
 }));
+
+export const useDarkMode = create<{
+  isDark: boolean;
+  toggleDarkMode: () => void;
+}>((set) => ({
+  isDark: false,
+  toggleDarkMode: () => set((state) => ({ isDark: !state.isDark })),
+}));
